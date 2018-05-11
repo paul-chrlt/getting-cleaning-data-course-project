@@ -12,6 +12,9 @@ trainfiles <- c(
         "train/y_train.txt"
 )
 
+## libraries
+library(plyr)
+
 ## creating source files paths
 
 filepathactivitylabels <- paste0(sourcedirlocation,"activity_labels.txt")
@@ -53,11 +56,15 @@ for (x in activitylabels[,1]) {
 dataset$activity <- as.factor(dataset$activity)
 
 ## extraction of the mean and standard deviation for each measurement
+meanstdindices <- grepl("mean|std",names(dataset))
+meanstdindices[c(1,length(meanstdindices))] <- c(TRUE,TRUE)
+dataset <- dataset[,meanstdindices]
 
-## activity names update
+## creation of an independant dataset
 
-## variable names update
-
-## tidy dataset
+datasetaverage <- dataset
 
 ## average of each variable for each activity and each subject
+
+datasetaverage<-ddply(datasetaverage,c("subjectID","activity"),colwise(mean))
+names(datasetaverage)[3:length(datasetaverage[1,])] <- paste("mean of",names(datasetaverage)[3:length(datasetaverage[1,])])
