@@ -72,4 +72,4 @@ datasetaverage <- dataset
 datasetaverage<-ddply(datasetaverage,c("subjectID","activity"),colwise(mean))
 names(datasetaverage)[3:length(datasetaverage[1,])] <- paste("mean of",names(datasetaverage)[3:length(datasetaverage[1,])])
 
-write.table(datasetaverage,file="datasetaverage.txt")
+write.table(datasetaverage,file="datasetaverage.txt",row.names = FALSE)
