@@ -5,8 +5,8 @@ This script takes the test and training datasets from UCI's human activity recog
 More information about the script can be found in the CodeBook.md
 
 ## Requirements
-**R** : tested with version 3.4.2 on a Linux environment
-**plyr library** : the script will load the library, but will not install it
+**R** : tested with version 3.4.2 on a Linux environment  
+**plyr library** : the script will load the library, but will not install it  
 **Data Set** : the dataset needs to be downloaded from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones and put at the same root level as the script. If you prefer to move it elsewhere, please update the *sourcedirlocation* variable.
 
 ## Credits
