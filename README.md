@@ -1,7 +1,7 @@
 # Analysis of "Human Activity Recognition Using Smartphones Data Set"
 
 ## What does this script do ?
-This script takes the test and training datasets from UCI's human activity recognition as an input and creates a file containing a tidy dataset with the average variable for each activity and each subject, ready for analysis. 
+This script takes the test and training datasets from UCI's human activity recognition as an input and creates a file containing a tidy dataset with the average variable for each activity and each subject, ready for analysis.  
 More information about the script can be found in the CodeBook.md
 
 ## Requirements
