@@ -11,14 +11,17 @@ trainfiles <- c(
         "train/X_train.txt",
         "train/y_train.txt"
 )
+activitylabelsfile <- "activity_labels.txt"
+
+featuresfile <- "features.txt"
 
 ## libraries
 library(plyr)
 
 ## creating source files paths
 
-filepathactivitylabels <- paste0(sourcedirlocation,"activity_labels.txt")
-filepathfeatureslabels <- paste0(sourcedirlocation,"features.txt")
+filepathactivitylabels <- paste0(sourcedirlocation,activitylabelsfile)
+filepathfeatureslabels <- paste0(sourcedirlocation,featuresfile)
 
 filepathtest <- paste0(sourcedirlocation,testfiles)
 
